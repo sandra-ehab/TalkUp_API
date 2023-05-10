@@ -96,7 +96,7 @@ public partial class TalkUpContext : DbContext
 
         modelBuilder.Entity<User>(entity =>
         {
-            entity.Property(e => e.PassWord).IsFixedLength();
+            entity.Property(e => e.Password).IsFixedLength();
         });
 
         OnModelCreatingPartial(modelBuilder);

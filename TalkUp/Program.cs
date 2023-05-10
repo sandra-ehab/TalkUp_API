@@ -2,6 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Options;
 using TalkUp;
+using TalkUp.Controllers;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -31,5 +32,7 @@ app.UseCors(c => c.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());
 app.UseAuthorization();
 
 app.MapControllers();
+
+//app.MapCommunityEndpoints();
 
 app.Run();
